@@ -1,0 +1,6 @@
+{
+  "name": "PocketMint",
+  "description": "A single-page expense tracker with dual-mode Smart Budget Planner using a high-contrast Cyber-Yellow theme.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

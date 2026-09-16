@@ -46,7 +46,7 @@ export const TransactionList: React.FC<TransactionListProps> = ({
         {transactions.length > 0 && (
           <button
             onClick={onClearAll}
-            className="self-start sm:self-auto text-xs text-red-650 dark:text-red-400 bg-red-50 dark:bg-red-950/20 hover:bg-red-100 dark:hover:bg-red-950/30 px-2.5 py-1 rounded-lg transition-colors flex items-center gap-1 cursor-pointer font-medium border border-transparent dark:border-red-900/30"
+            className="self-start sm:self-auto text-xs text-red-500 dark:text-red-400 bg-red-50 dark:bg-red-950/20 hover:bg-red-100 dark:hover:bg-red-950/30 px-2.5 py-1 rounded-lg transition-colors flex items-center gap-1 cursor-pointer font-medium border border-transparent dark:border-red-900/30"
           >
             <Trash2 className="w-3.5 h-3.5" />
             Clear
@@ -73,7 +73,7 @@ export const TransactionList: React.FC<TransactionListProps> = ({
             <select
               value={categoryFilter}
               onChange={(e) => setCategoryFilter(e.target.value)}
-              className="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-xl pl-7 pr-3 py-1.5 text-xs text-zinc-700 dark:text-zinc-305 focus:outline-none focus:border-amber-400 dark:focus:border-amber-500 focus:bg-white dark:focus:bg-zinc-900 cursor-pointer transition-colors"
+              className="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-xl pl-7 pr-3 py-1.5 text-xs text-zinc-700 dark:text-zinc-300 focus:outline-none focus:border-amber-400 dark:focus:border-amber-500 focus:bg-white dark:focus:bg-zinc-900 cursor-pointer transition-colors"
             >
               <option value="ALL">All Categories</option>
               <option value="Travel/Pursuits">★ Travel / Pursuits</option>
@@ -89,7 +89,7 @@ export const TransactionList: React.FC<TransactionListProps> = ({
 
       {/* List */}
       {filtered.length === 0 ? (
-        <div className="text-center py-12 px-4 bg-zinc-50/50 dark:bg-zinc-850/10 rounded-xl border border-dashed border-zinc-200 dark:border-zinc-800">
+        <div className="text-center py-12 px-4 bg-zinc-50/50 dark:bg-zinc-800/10 rounded-xl border border-dashed border-zinc-200 dark:border-zinc-800">
           <p className="text-xs text-zinc-500 dark:text-zinc-400">
             {transactions.length === 0
               ? "No expenses or income logged yet. Add your first item above!"
@@ -104,7 +104,7 @@ export const TransactionList: React.FC<TransactionListProps> = ({
             return (
               <div
                 key={t.id}
-                className="flex items-center justify-between p-3 rounded-xl border border-zinc-100 dark:border-zinc-800/80 hover:border-zinc-200 dark:hover:border-zinc-700 bg-zinc-50/40 dark:bg-zinc-850/5 hover:bg-white dark:hover:bg-zinc-900 transition-all duration-150"
+                className="flex items-center justify-between p-3 rounded-xl border border-zinc-100 dark:border-zinc-800/80 hover:border-zinc-200 dark:hover:border-zinc-700 bg-zinc-50/40 dark:bg-zinc-800/5 hover:bg-white dark:hover:bg-zinc-900 transition-all duration-150"
               >
                 <div className="flex items-center gap-3 min-w-0 flex-1 pr-3">
                   <div
@@ -131,7 +131,7 @@ export const TransactionList: React.FC<TransactionListProps> = ({
                       </span>
                     </div>
                     
-                    <div className="flex items-center gap-2 text-[11px] text-zinc-500 dark:text-zinc-450 mt-0.5">
+                    <div className="flex items-center gap-2 text-[11px] text-zinc-500 dark:text-zinc-500 mt-0.5">
                       <span className="font-mono">{t.date}</span>
                       {t.note && (
                         <span className="truncate text-zinc-400 dark:text-zinc-500 italic">
@@ -154,7 +154,7 @@ export const TransactionList: React.FC<TransactionListProps> = ({
 
                   <button
                     onClick={() => onDeleteTransaction(t.id)}
-                    className="p-1.5 text-zinc-400 dark:text-zinc-500 hover:text-red-650 dark:hover:text-red-400 hover:bg-red-50 dark:hover:bg-red-950/30 rounded-lg transition-colors cursor-pointer"
+                    className="p-1.5 text-zinc-400 dark:text-zinc-500 hover:text-red-500 dark:hover:text-red-400 hover:bg-red-50 dark:hover:bg-red-950/30 rounded-lg transition-colors cursor-pointer"
                     title="Delete item"
                   >
                     <Trash2 className="w-4 h-4" />

@@ -339,39 +339,39 @@ export default function App() {
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3.5">
               <div className="bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800/80 rounded-2xl p-4 shadow-2xs transition-colors duration-200">
                 <div className="flex items-center justify-between text-zinc-400 dark:text-zinc-500 mb-1">
-                  <span className="text-xs font-medium text-zinc-500 dark:text-zinc-450">Total Earnings</span>
+                  <span className="text-xs font-medium text-zinc-500 dark:text-zinc-500">Total Earnings</span>
                   <TrendingUp className="w-4 h-4 text-emerald-500" />
                 </div>
                 <span className="text-xl sm:text-2xl font-bold font-mono text-zinc-900 dark:text-zinc-50">
                   {formatCurrency(totalMonthlyEarnings)}
                 </span>
-                <span className="text-[11px] text-zinc-450 dark:text-zinc-400 mt-0.5 block truncate">
+                <span className="text-[11px] text-zinc-500 dark:text-zinc-400 mt-0.5 block truncate">
                   Base allowance + gigs
                 </span>
               </div>
 
               <div className="bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800/80 rounded-2xl p-4 shadow-2xs transition-colors duration-200">
                 <div className="flex items-center justify-between text-zinc-400 dark:text-zinc-500 mb-1">
-                  <span className="text-xs font-medium text-zinc-500 dark:text-zinc-450">Fixed Essentials</span>
+                  <span className="text-xs font-medium text-zinc-500 dark:text-zinc-500">Fixed Essentials</span>
                   <DollarSign className="w-4 h-4 text-amber-500" />
                 </div>
                 <span className="text-xl sm:text-2xl font-bold font-mono text-zinc-900 dark:text-zinc-50">
                   {formatCurrency(totalFixedExpenses)}
                 </span>
-                <span className="text-[11px] text-zinc-450 dark:text-zinc-400 mt-0.5 block truncate">
+                <span className="text-[11px] text-zinc-500 dark:text-zinc-400 mt-0.5 block truncate">
                   Rent & groceries
                 </span>
               </div>
 
               <div className="bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800/80 rounded-2xl p-4 shadow-2xs transition-colors duration-200">
                 <div className="flex items-center justify-between text-zinc-400 dark:text-zinc-500 mb-1">
-                  <span className="text-xs font-medium text-zinc-500 dark:text-zinc-450">Variable Spending</span>
-                  <TrendingDown className="w-4 h-4 text-amber-650" />
+                  <span className="text-xs font-medium text-zinc-500 dark:text-zinc-500">Variable Spending</span>
+                  <TrendingDown className="w-4 h-4 text-amber-600" />
                 </div>
                 <span className="text-xl sm:text-2xl font-bold font-mono text-amber-600 dark:text-amber-500">
                   {formatCurrency(totalVariableSpend)}
                 </span>
-                <span className="text-[11px] text-zinc-450 dark:text-zinc-400 mt-0.5 block truncate">
+                <span className="text-[11px] text-zinc-500 dark:text-zinc-400 mt-0.5 block truncate">
                   Trips, food, textbooks
                 </span>
               </div>
@@ -443,7 +443,7 @@ export default function App() {
                             <span className="w-2 h-2 rounded-full bg-emerald-500" />
                             Monthly Allowance / Paycheck
                           </td>
-                          <td className="py-3 text-emerald-700 dark:text-emerald-450 text-xs font-semibold">Base Earning</td>
+                          <td className="py-3 text-emerald-700 dark:text-emerald-500 text-xs font-semibold">Base Earning</td>
                           <td className="py-3 text-right pr-2 font-mono text-emerald-600 dark:text-emerald-400 font-bold">
                             +{formatCurrency(fixedCosts.income)}
                           </td>
@@ -455,7 +455,7 @@ export default function App() {
                               <span className="w-2 h-2 rounded-full bg-emerald-400" />
                               Logged Freelance & Gig Work
                             </td>
-                            <td className="py-3 text-emerald-700 dark:text-emerald-450 text-xs">Extra Earning</td>
+                            <td className="py-3 text-emerald-700 dark:text-emerald-500 text-xs">Extra Earning</td>
                             <td className="py-3 text-right pr-2 font-mono text-emerald-600 dark:text-emerald-400 font-bold">
                               +{formatCurrency(extraIncomeLogged)}
                             </td>
@@ -528,7 +528,7 @@ export default function App() {
                   </div>
                   <button
                     onClick={() => setActiveTab("history")}
-                    className="text-xs font-semibold text-amber-600 dark:text-amber-500 hover:text-amber-700 flex items-center gap-1 cursor-pointer bg-amber-50 dark:bg-amber-955/30 hover:bg-amber-100 dark:hover:bg-amber-950/40 px-2.5 py-1 rounded-lg transition-colors border border-transparent dark:border-amber-900/30"
+                    className="text-xs font-semibold text-amber-600 dark:text-amber-500 hover:text-amber-700 flex items-center gap-1 cursor-pointer bg-amber-50 dark:bg-amber-950/30 hover:bg-amber-100 dark:hover:bg-amber-950/40 px-2.5 py-1 rounded-lg transition-colors border border-transparent dark:border-amber-900/30"
                   >
                     <span>View All</span>
                     <ArrowRight className="w-3 h-3" />
@@ -549,7 +549,7 @@ export default function App() {
                             <p className="font-semibold text-zinc-900 dark:text-zinc-100 truncate">
                               {t.title}
                             </p>
-                            <div className="flex items-center gap-1.5 text-[11px] text-zinc-400 dark:text-zinc-550 mt-0.5">
+                            <div className="flex items-center gap-1.5 text-[11px] text-zinc-400 dark:text-zinc-500 mt-0.5">
                               <span>{t.category}</span>
                               <span>•</span>
                               <span className="font-mono">{t.date}</span>

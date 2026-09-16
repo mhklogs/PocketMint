@@ -169,7 +169,7 @@ export function generateGoalPlan(
   if (monthlySavingsCapacity <= 0) {
     bullets.push(`• Assessment: Your monthly expenses (${sym}${monthlySpend.toFixed(0)}) match or exceed your income (${sym}${income.toFixed(0)}).`);
     bullets.push(`• To save for "${goalName}", you'll need to free up cash: ${role.includes("student") ? "find a part-time gig, or reduce dining out and subscriptions" : role.includes("freelanc") ? "increase your rates or take on an extra client" : role.includes("business") ? "cut operational costs or boost revenue channels" : "cut discretionary spending by 15-20%"} first.`);
-    bullets.push(`• Start with a 30-day expense audit — track every rupee to find saving opportunities.`);
+    bullets.push(`• Start with a 30-day expense audit — track every expense in ${currency.code} to find saving opportunities.`);
     return {
       planText: bullets.join("\n"),
       source: "goal_plan",

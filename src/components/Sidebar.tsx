@@ -187,7 +187,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
           {/* Profile Section */}
           <button
             onClick={onEditProfile}
-            className="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl bg-white dark:bg-zinc-800 border border-zinc-200/80 dark:border-zinc-700/80 hover:bg-zinc-50 dark:hover:bg-zinc-750 transition-all cursor-pointer text-left"
+            className="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl bg-white dark:bg-zinc-800 border border-zinc-200/80 dark:border-zinc-700/80 hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-all cursor-pointer text-left"
           >
             <div className="w-8 h-8 rounded-lg bg-amber-400 flex items-center justify-center text-zinc-950 font-bold text-xs shrink-0">
               {profile ? profile.name.charAt(0).toUpperCase() : "?"}
@@ -226,7 +226,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
               setTempConfig(aiConfig);
               setShowConfigModal(true);
             }}
-            className="w-full flex items-center justify-center gap-2 px-3 py-2 rounded-xl bg-zinc-100 dark:bg-zinc-850 hover:bg-zinc-200 dark:hover:bg-zinc-800 text-zinc-700 dark:text-zinc-300 text-xs font-medium transition-colors cursor-pointer border border-zinc-200/60 dark:border-zinc-700/60"
+            className="w-full flex items-center justify-center gap-2 px-3 py-2 rounded-xl bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-800 text-zinc-700 dark:text-zinc-300 text-xs font-medium transition-colors cursor-pointer border border-zinc-200/60 dark:border-zinc-700/60"
           >
             <Settings className="w-3.5 h-3.5" />
             <span>AI Planning Settings</span>
@@ -325,7 +325,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
               </button>
             </div>
 
-            <p className="text-xs text-zinc-650 dark:text-zinc-400 mt-3 leading-relaxed">
+            <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-3 leading-relaxed">
               Connect a low-cost model (like Llama 3 via Groq or local Ollama) for realistic budgeting tips, or leave defaults.
             </p>
 
@@ -380,7 +380,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
 
             <form onSubmit={handleSaveConfig} className="mt-5 space-y-4">
               <div>
-                <label className="block text-xs font-medium text-zinc-705 dark:text-zinc-300 mb-1">
+                <label className="block text-xs font-medium text-zinc-600 dark:text-zinc-300 mb-1">
                   API URL Endpoint
                 </label>
                 <input
@@ -388,12 +388,12 @@ export const Sidebar: React.FC<SidebarProps> = ({
                   placeholder="default (built-in server proxy)"
                   value={tempConfig.baseUrl}
                   onChange={(e) => setTempConfig({ ...tempConfig, baseUrl: e.target.value })}
-                  className="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-xl px-3 py-2 text-xs text-zinc-800 dark:text-zinc-100 font-mono focus:outline-none focus:border-amber-400 dark:focus:border-amber-500 focus:bg-white dark:focus:bg-zinc-850"
+                  className="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-xl px-3 py-2 text-xs text-zinc-800 dark:text-zinc-100 font-mono focus:outline-none focus:border-amber-400 dark:focus:border-amber-500 focus:bg-white dark:focus:bg-zinc-800"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-medium text-zinc-705 dark:text-zinc-300 mb-1">
+                <label className="block text-xs font-medium text-zinc-600 dark:text-zinc-300 mb-1">
                   API Key (if required)
                 </label>
                 <input
@@ -401,12 +401,12 @@ export const Sidebar: React.FC<SidebarProps> = ({
                   placeholder="Leave empty for default server key"
                   value={tempConfig.apiKey}
                   onChange={(e) => setTempConfig({ ...tempConfig, apiKey: e.target.value })}
-                  className="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-xl px-3 py-2 text-xs text-zinc-800 dark:text-zinc-100 font-mono focus:outline-none focus:border-amber-400 dark:focus:border-amber-500 focus:bg-white dark:focus:bg-zinc-850"
+                  className="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-xl px-3 py-2 text-xs text-zinc-800 dark:text-zinc-100 font-mono focus:outline-none focus:border-amber-400 dark:focus:border-amber-500 focus:bg-white dark:focus:bg-zinc-800"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-medium text-zinc-705 dark:text-zinc-300 mb-1">
+                <label className="block text-xs font-medium text-zinc-600 dark:text-zinc-300 mb-1">
                   Model Name
                 </label>
                 <input
@@ -414,7 +414,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
                   placeholder="llama3-8b-8192"
                   value={tempConfig.model}
                   onChange={(e) => setTempConfig({ ...tempConfig, model: e.target.value })}
-                  className="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-xl px-3 py-2 text-xs text-zinc-800 dark:text-zinc-100 font-mono focus:outline-none focus:border-amber-400 dark:focus:border-amber-500 focus:bg-white dark:focus:bg-zinc-850"
+                  className="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-xl px-3 py-2 text-xs text-zinc-800 dark:text-zinc-100 font-mono focus:outline-none focus:border-amber-400 dark:focus:border-amber-500 focus:bg-white dark:focus:bg-zinc-800"
                 />
               </div>
 
@@ -426,7 +426,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
                   onChange={(e) => setTempConfig({ ...tempConfig, useDirectClientFetch: e.target.checked })}
                   className="mt-0.5 accent-amber-500 rounded cursor-pointer"
                 />
-                <label htmlFor="directClient" className="text-[11px] text-zinc-650 dark:text-zinc-300 cursor-pointer leading-tight">
+                <label htmlFor="directClient" className="text-[11px] text-zinc-500 dark:text-zinc-300 cursor-pointer leading-tight">
                   <span className="font-medium text-zinc-900 dark:text-zinc-50">Direct Browser Fetch</span>: Check this if running local Ollama (http://localhost:11434).
                 </label>
               </div>
@@ -435,7 +435,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
                 <button
                   type="button"
                   onClick={() => setShowConfigModal(false)}
-                  className="px-4 py-2 rounded-xl bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-205 dark:hover:bg-zinc-750 text-xs font-medium text-zinc-700 dark:text-zinc-300 transition-colors cursor-pointer border border-transparent dark:border-zinc-700"
+                  className="px-4 py-2 rounded-xl bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-800 text-xs font-medium text-zinc-700 dark:text-zinc-300 transition-colors cursor-pointer border border-transparent dark:border-zinc-700"
                 >
                   Cancel
                 </button>

@@ -56,7 +56,7 @@ export const FixedCostsCard: React.FC<FixedCostsCardProps> = ({
       <div className="space-y-3.5">
         {/* Total Monthly Income / Allowance */}
         <div>
-          <label className="flex items-center gap-1.5 text-xs font-medium text-zinc-755 dark:text-zinc-300 mb-1">
+          <label className="flex items-center gap-1.5 text-xs font-medium text-zinc-600 dark:text-zinc-300 mb-1">
             <DollarSign className="w-3.5 h-3.5 text-amber-500" />
             Monthly Income / Allowance / Paycheck
           </label>
@@ -78,7 +78,7 @@ export const FixedCostsCard: React.FC<FixedCostsCardProps> = ({
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {/* Fixed Monthly Rent */}
           <div>
-            <label className="flex items-center gap-1.5 text-xs font-medium text-zinc-755 dark:text-zinc-300 mb-1">
+            <label className="flex items-center gap-1.5 text-xs font-medium text-zinc-600 dark:text-zinc-300 mb-1">
               <Home className="w-3.5 h-3.5 text-amber-500" />
               Monthly Rent / Dorm
             </label>
@@ -99,7 +99,7 @@ export const FixedCostsCard: React.FC<FixedCostsCardProps> = ({
 
           {/* Average Groceries */}
           <div>
-            <label className="flex items-center gap-1.5 text-xs font-medium text-zinc-755 dark:text-zinc-300 mb-1">
+            <label className="flex items-center gap-1.5 text-xs font-medium text-zinc-600 dark:text-zinc-300 mb-1">
               <ShoppingBag className="w-3.5 h-3.5 text-amber-500" />
               Average Groceries & Food
             </label>

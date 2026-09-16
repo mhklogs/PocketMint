@@ -1,8 +1,13 @@
 {
-  "name": "react-example",
+  "name": "pocketmint",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "PocketMint — smart expense tracker with AI-powered budget planning, goal planner, multi-currency support, and offline PWA.",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mhklogs/PocketMint.git"
+  },
   "scripts": {
     "dev": "tsx server.ts",
     "build": "vite build && esbuild server.ts --bundle --platform=node --format=cjs --packages=external --sourcemap --outfile=dist/server.cjs",

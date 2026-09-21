@@ -69,14 +69,14 @@ export function DataBackup({ onImport }: DataBackupProps) {
       <div className="flex gap-2">
         <button
           onClick={handleExport}
-          className="flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 text-zinc-700 dark:text-zinc-300 text-xs font-medium transition-colors cursor-pointer border border-zinc-200/60 dark:border-zinc-700/60"
+          className="flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-2xl bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 text-zinc-700 dark:text-zinc-300 text-xs font-medium transition-colors cursor-pointer border border-zinc-200/60 dark:border-zinc-700/60"
         >
           <Download className="w-3.5 h-3.5" />
           Export Backup
         </button>
         <button
           onClick={() => fileInputRef.current?.click()}
-          className="flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 text-zinc-700 dark:text-zinc-300 text-xs font-medium transition-colors cursor-pointer border border-zinc-200/60 dark:border-zinc-700/60"
+          className="flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-2xl bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 text-zinc-700 dark:text-zinc-300 text-xs font-medium transition-colors cursor-pointer border border-zinc-200/60 dark:border-zinc-700/60"
         >
           <Upload className="w-3.5 h-3.5" />
           Restore Backup

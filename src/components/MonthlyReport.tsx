@@ -103,7 +103,7 @@ Give a professional, honest assessment of their financial health this month and 
         <button
           onClick={handleGenerate}
           disabled={loading}
-          className="px-3 py-1.5 rounded-xl bg-amber-400 hover:bg-amber-500 disabled:opacity-60 text-zinc-950 text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer shadow-xs"
+          className="px-4 py-2 rounded-full bg-zinc-900 hover:bg-zinc-800 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-white disabled:opacity-60 text-zinc-50 text-xs font-semibold transition-all flex items-center gap-1.5 cursor-pointer"
         >
           {loading ? <RefreshCw className="w-3.5 h-3.5 animate-spin" /> : <Sparkles className="w-3.5 h-3.5" />}
           {loading ? "Generating..." : "Generate Report"}
@@ -111,17 +111,17 @@ Give a professional, honest assessment of their financial health this month and 
       </div>
 
       {error && (
-        <div className="flex items-center gap-2 p-3 rounded-xl bg-red-50 dark:bg-red-950/20 border border-red-100 dark:border-red-900/30 text-red-700 dark:text-red-400 text-xs mb-3">
+        <div className="flex items-center gap-2 p-3 rounded-2xl bg-red-50 dark:bg-red-950/20 border border-zinc-200 dark:border-zinc-800 text-red-700 dark:text-red-400 text-xs mb-3">
           <AlertCircle className="w-4 h-4 shrink-0" />
           <span>Could not generate report. Gemini API may need configuration.</span>
         </div>
       )}
 
       {report ? (
-        <div className="p-4 rounded-xl bg-zinc-50/80 dark:bg-zinc-800/50 border border-zinc-100 dark:border-zinc-800">
+        <div className="p-4 rounded-2xl bg-zinc-50/80 dark:bg-zinc-800/50 border border-zinc-100 dark:border-zinc-800">
           <div className="flex items-center gap-1.5 mb-2">
             <Lightbulb className="w-3.5 h-3.5 text-amber-500" />
-            <span className="text-[10px] font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">Gemini AI Report</span>
+            <span className="text-[11px] font-semibold text-zinc-500 dark:text-zinc-400">Gemini AI Report</span>
           </div>
           <p className="text-xs text-zinc-700 dark:text-zinc-300 leading-relaxed whitespace-pre-line">{report}</p>
         </div>

@@ -20,11 +20,11 @@ export function ConfirmDialog({
   destructive,
 }: ConfirmDialogProps) {
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-zinc-900/55 backdrop-blur-xs p-4 animate-fade-in">
-      <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl max-w-sm w-full p-6 shadow-2xl transition-colors">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-zinc-900/60 p-4 animate-fade-in">
+      <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl max-w-sm w-full p-6 shadow-lg transition-colors">
         <div className="flex items-start justify-between mb-3">
           <div className="flex items-center gap-3">
-            <div className={`p-2 rounded-xl ${destructive ? "bg-red-100 dark:bg-red-950/30" : "bg-zinc-100 dark:bg-zinc-800"}`}>
+            <div className={`p-2 rounded-2xl ${destructive ? "bg-red-50 dark:bg-red-950/30" : "bg-zinc-100 dark:bg-zinc-800"}`}>
               <AlertTriangle className={`w-5 h-5 ${destructive ? "text-red-600 dark:text-red-400" : "text-zinc-600 dark:text-zinc-400"}`} />
             </div>
             <h3 className="text-sm font-bold text-zinc-900 dark:text-zinc-50">{title}</h3>
@@ -37,16 +37,16 @@ export function ConfirmDialog({
         <div className="flex gap-2 justify-end">
           <button
             onClick={onCancel}
-            className="px-4 py-2 rounded-xl bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 text-xs font-medium text-zinc-700 dark:text-zinc-300 transition-colors cursor-pointer"
+            className="px-4 py-2 rounded-full bg-white dark:bg-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-700 border border-zinc-200 dark:border-zinc-700 text-xs font-medium text-zinc-700 dark:text-zinc-300 transition-colors cursor-pointer"
           >
             {cancelLabel}
           </button>
           <button
             onClick={onConfirm}
-            className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer shadow-xs ${
+            className={`px-5 py-2 rounded-full text-xs font-semibold transition-all cursor-pointer ${
               destructive
                 ? "bg-red-600 hover:bg-red-700 text-white"
-                : "bg-amber-400 hover:bg-amber-500 text-zinc-950"
+                : "bg-zinc-900 hover:bg-zinc-800 text-zinc-50 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-white"
             }`}
           >
             {confirmLabel}

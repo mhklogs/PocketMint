@@ -68,7 +68,7 @@ export const TransactionForm: React.FC<TransactionFormProps> = ({
         </div>
 
         {/* Type Toggle */}
-        <div className="flex bg-zinc-100 dark:bg-zinc-800 p-1 rounded-xl text-xs font-medium">
+        <div className="flex bg-zinc-100 dark:bg-zinc-800 p-1 rounded-full text-xs font-medium">
           <button
             type="button"
             onClick={() => {
@@ -77,7 +77,7 @@ export const TransactionForm: React.FC<TransactionFormProps> = ({
                 setCategory("Travel/Pursuits");
               }
             }}
-            className={`px-3 py-1 rounded-lg transition-all cursor-pointer ${
+            className={`px-3 py-1 rounded-full transition-all cursor-pointer ${
               type === "expense"
                 ? "bg-white dark:bg-zinc-700 text-zinc-900 dark:text-zinc-50 shadow-xs font-semibold"
                 : "text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100"
@@ -91,7 +91,7 @@ export const TransactionForm: React.FC<TransactionFormProps> = ({
               setType("income");
               setCategory("Freelance/Bonus");
             }}
-            className={`px-3 py-1 rounded-lg transition-all cursor-pointer ${
+            className={`px-3 py-1 rounded-full transition-all cursor-pointer ${
               type === "income"
                 ? "bg-white dark:bg-zinc-700 text-emerald-700 dark:text-emerald-400 shadow-xs font-semibold"
                 : "text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100"
@@ -103,7 +103,7 @@ export const TransactionForm: React.FC<TransactionFormProps> = ({
       </div>
 
       {errorMsg && (
-        <div className="mb-4 px-3 py-2 rounded-xl bg-red-50 dark:bg-red-950/20 border border-red-100 dark:border-red-900/30 text-red-700 dark:text-red-400 text-xs flex items-center gap-2">
+        <div className="mb-4 px-3 py-2 rounded-2xl bg-red-50 dark:bg-red-950/20 border border-zinc-200 dark:border-zinc-800 text-red-700 dark:text-red-400 text-xs flex items-center gap-2">
           <AlertCircle className="w-4 h-4 shrink-0" />
           <span>{errorMsg}</span>
         </div>
@@ -119,7 +119,7 @@ export const TransactionForm: React.FC<TransactionFormProps> = ({
             placeholder={type === "expense" ? "e.g. Bus fare, Used Biology Textbook, Ramen" : "e.g. Logo design gig, Tutoring"}
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            className="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-xl px-3 py-2 text-xs text-zinc-900 dark:text-zinc-50 placeholder:text-zinc-400 dark:placeholder:text-zinc-500 focus:outline-none focus:border-amber-400 dark:focus:border-amber-500 focus:bg-white dark:focus:bg-zinc-900 transition-colors"
+            className="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-2xl px-3 py-2 text-xs text-zinc-900 dark:text-zinc-50 placeholder:text-zinc-400 dark:placeholder:text-zinc-500 focus:outline-none focus:border-amber-400 dark:focus:border-amber-500 focus:bg-white dark:focus:bg-zinc-900 transition-colors"
           />
         </div>
 
@@ -138,7 +138,7 @@ export const TransactionForm: React.FC<TransactionFormProps> = ({
                 placeholder="0.00"
                 value={amount}
                 onChange={(e) => setAmount(e.target.value)}
-                className="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-xl pl-7 pr-3 py-2 text-xs font-mono text-zinc-900 dark:text-zinc-50 placeholder:text-zinc-400 dark:placeholder:text-zinc-500 focus:outline-none focus:border-amber-400 dark:focus:border-amber-500 focus:bg-white dark:focus:bg-zinc-900 transition-colors"
+                className="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-2xl pl-7 pr-3 py-2 text-xs font-mono text-zinc-900 dark:text-zinc-50 placeholder:text-zinc-400 dark:placeholder:text-zinc-500 focus:outline-none focus:border-amber-400 dark:focus:border-amber-500 focus:bg-white dark:focus:bg-zinc-900 transition-colors"
               />
             </div>
           </div>
@@ -156,7 +156,7 @@ export const TransactionForm: React.FC<TransactionFormProps> = ({
               <select
                 value={category}
                 onChange={(e) => setCategory(e.target.value as VariableCategory)}
-                className="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-xl pl-7 pr-3 py-2 text-xs text-zinc-800 dark:text-zinc-100 focus:outline-none focus:border-amber-400 dark:focus:border-amber-500 focus:bg-white dark:focus:bg-zinc-900 cursor-pointer transition-colors"
+                className="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-2xl pl-7 pr-3 py-2 text-xs text-zinc-800 dark:text-zinc-100 focus:outline-none focus:border-amber-400 dark:focus:border-amber-500 focus:bg-white dark:focus:bg-zinc-900 cursor-pointer transition-colors"
               >
                 {type === "expense" ? (
                   <>
@@ -194,7 +194,7 @@ export const TransactionForm: React.FC<TransactionFormProps> = ({
                 type="date"
                 value={date}
                 onChange={(e) => setDate(e.target.value)}
-                className="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-xl pl-7 pr-3 py-2 text-xs text-zinc-800 dark:text-zinc-100 focus:outline-none focus:border-amber-400 dark:focus:border-amber-500 focus:bg-white dark:focus:bg-zinc-900 font-mono transition-colors"
+                className="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-2xl pl-7 pr-3 py-2 text-xs text-zinc-800 dark:text-zinc-100 focus:outline-none focus:border-amber-400 dark:focus:border-amber-500 focus:bg-white dark:focus:bg-zinc-900 font-mono transition-colors"
               />
             </div>
           </div>
@@ -208,14 +208,14 @@ export const TransactionForm: React.FC<TransactionFormProps> = ({
               placeholder="e.g. Split with Sarah"
               value={note}
               onChange={(e) => setNote(e.target.value)}
-              className="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-xl px-3 py-2 text-xs text-zinc-800 dark:text-zinc-100 placeholder:text-zinc-400 dark:placeholder:text-zinc-500 focus:outline-none focus:border-amber-400 dark:focus:border-amber-500 focus:bg-white dark:focus:bg-zinc-900 transition-colors"
+              className="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-2xl px-3 py-2 text-xs text-zinc-800 dark:text-zinc-100 placeholder:text-zinc-400 dark:placeholder:text-zinc-500 focus:outline-none focus:border-amber-400 dark:focus:border-amber-500 focus:bg-white dark:focus:bg-zinc-900 transition-colors"
             />
           </div>
 
           <div className="sm:col-span-3">
             <button
               type="submit"
-              className="w-full py-2 px-3 rounded-xl bg-amber-400 hover:bg-amber-500 active:scale-95 text-zinc-950 font-bold text-xs transition-all flex items-center justify-center gap-1 cursor-pointer shadow-xs"
+              className="w-full py-2.5 px-4 rounded-full bg-zinc-900 hover:bg-zinc-800 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-white active:scale-95 text-zinc-50 font-semibold text-xs transition-all flex items-center justify-center gap-1.5 cursor-pointer"
             >
               <Plus className="w-4 h-4 stroke-[2.5]" />
               Add

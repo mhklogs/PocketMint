@@ -70,7 +70,7 @@ export const FixedCostsCard: React.FC<FixedCostsCardProps> = ({
               value={tempCosts.income || ""}
               onChange={(e) => handleChange("income", e.target.value)}
               onBlur={handleManualTrigger}
-              className="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-xl pl-7 pr-3 py-2 text-sm font-mono text-zinc-900 dark:text-zinc-55 focus:outline-none focus:border-amber-400 dark:focus:border-amber-500 focus:bg-white dark:focus:bg-zinc-900 transition-colors"
+              className="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-2xl pl-7 pr-3 py-2 text-sm font-mono text-zinc-900 dark:text-zinc-55 focus:outline-none focus:border-amber-400 dark:focus:border-amber-500 focus:bg-white dark:focus:bg-zinc-900 transition-colors"
             />
           </div>
         </div>
@@ -92,7 +92,7 @@ export const FixedCostsCard: React.FC<FixedCostsCardProps> = ({
                 value={tempCosts.rent || ""}
                 onChange={(e) => handleChange("rent", e.target.value)}
                 onBlur={handleManualTrigger}
-                className="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-xl pl-7 pr-3 py-2 text-sm font-mono text-zinc-900 dark:text-zinc-55 focus:outline-none focus:border-amber-400 dark:focus:border-amber-500 focus:bg-white dark:focus:bg-zinc-900 transition-colors"
+                className="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-2xl pl-7 pr-3 py-2 text-sm font-mono text-zinc-900 dark:text-zinc-55 focus:outline-none focus:border-amber-400 dark:focus:border-amber-500 focus:bg-white dark:focus:bg-zinc-900 transition-colors"
               />
             </div>
           </div>
@@ -113,7 +113,7 @@ export const FixedCostsCard: React.FC<FixedCostsCardProps> = ({
                 value={tempCosts.grocery || ""}
                 onChange={(e) => handleChange("grocery", e.target.value)}
                 onBlur={handleManualTrigger}
-                className="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-xl pl-7 pr-3 py-2 text-sm font-mono text-zinc-900 dark:text-zinc-55 focus:outline-none focus:border-amber-400 dark:focus:border-amber-500 focus:bg-white dark:focus:bg-zinc-900 transition-colors"
+                className="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-2xl pl-7 pr-3 py-2 text-sm font-mono text-zinc-900 dark:text-zinc-55 focus:outline-none focus:border-amber-400 dark:focus:border-amber-500 focus:bg-white dark:focus:bg-zinc-900 transition-colors"
               />
             </div>
           </div>

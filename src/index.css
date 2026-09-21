@@ -1,6 +1,60 @@
 @import "tailwindcss";
 
 @theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Cinzel", ui-serif, Georgia, serif;
+  --font-mono: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+
+  /* Cream + ink base — quiet, warm, editorial */
+  --color-zinc-50: #F9F8F6;
+  --color-zinc-100: #F2F0EC;
+  --color-zinc-200: #E5E0D6;
+  --color-zinc-300: #D6CFC2;
+  --color-zinc-400: #A8A296;
+  --color-zinc-500: #8A8578;
+  --color-zinc-600: #57534E;
+  --color-zinc-700: #44403C;
+  --color-zinc-800: #26332F;
+  --color-zinc-900: #15201D;
+  --color-zinc-950: #0B1210;
+
+  /* Single quiet amber accent, light through dark shades */
+  --color-amber-50: #FBF4EA;
+  --color-amber-100: #F6E7CF;
+  --color-amber-200: #EFD3A8;
+  --color-amber-300: #E2B778;
+  --color-amber-400: #D97706;
+  --color-amber-500: #B45309;
+  --color-amber-600: #92400E;
+  --color-amber-700: #7C2D12;
+  --color-amber-800: #6B2410;
+  --color-amber-900: #4A1C0E;
+  --color-amber-950: #2E1207;
+
+  /* Muted functional status colors */
+  --color-emerald-50: #EEF3EE;
+  --color-emerald-100: #DCE7DD;
+  --color-emerald-200: #C2D6C5;
+  --color-emerald-300: #A3C0A7;
+  --color-emerald-400: #6B8F71;
+  --color-emerald-500: #4B7F52;
+  --color-emerald-600: #3F6B45;
+  --color-emerald-700: #35573A;
+  --color-emerald-800: #2C4A31;
+  --color-emerald-950: #14251A;
+
+  --color-red-50: #FBF0EE;
+  --color-red-100: #F5DDD6;
+  --color-red-200: #EBC8C0;
+  --color-red-300: #D89C8E;
+  --color-red-400: #C0624F;
+  --color-red-500: #A94A36;
+  --color-red-600: #8F3B29;
+  --color-red-700: #7A3222;
+  --color-red-800: #64291D;
+  --color-red-900: #4A1D14;
+  --color-red-950: #2E120C;
+
   --animate-fade-in: fade-in 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 
   @keyframes fade-in {
@@ -17,3 +71,34 @@
 
 /* Configure class-based dark mode for Tailwind v4 */
 @variant dark (&:where(.dark, .dark *));
+
+body {
+  background: #f9f8f6;
+  color: #1a1a1a;
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Cinzel", ui-serif, Georgia, serif;
+}
+
+.font-display {
+  font-family: "Cinzel", ui-serif, Georgia, serif;
+}
+
+.font-mono {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Pill primary actions */
+button[type="submit"] {
+  border-radius: 9999px;
+}
+
+/* Quiet focus treatment */
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #b45309 !important;
+  box-shadow: 0 0 0 2px rgba(180, 83, 9, 0.12);
+}

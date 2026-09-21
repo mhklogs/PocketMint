@@ -36,8 +36,8 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-zinc-900/55 backdrop-blur-xs p-4 animate-fade-in">
-      <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl max-w-md w-full p-6 shadow-2xl transition-colors duration-200">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-zinc-900/60 p-4 animate-fade-in">
+      <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl max-w-md w-full p-6 shadow-lg transition-colors duration-200">
         <div className="flex items-center justify-between pb-4 border-b border-zinc-100 dark:border-zinc-800">
           <div className="flex items-center gap-2 text-amber-600">
             <UserIcon className="w-5 h-5" />
@@ -71,7 +71,7 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
                 placeholder="e.g. Alex"
                 value={name}
                 onChange={(e) => { setName(e.target.value); setError(null); }}
-                className="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-xl pl-7 pr-3 py-2 text-sm text-zinc-900 dark:text-zinc-50 placeholder:text-zinc-400 dark:placeholder:text-zinc-500 focus:outline-none focus:border-amber-400 dark:focus:border-amber-500 focus:bg-white dark:focus:bg-zinc-900 transition-colors"
+                className="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-full pl-9 pr-4 py-2 text-sm text-zinc-900 dark:text-zinc-50 placeholder:text-zinc-400 dark:placeholder:text-zinc-500 focus:outline-none focus:border-amber-400 dark:focus:border-amber-500 focus:bg-white dark:focus:bg-zinc-900 transition-colors"
               />
             </div>
             {error && (
@@ -88,7 +88,7 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
               <select
                 value={profession}
                 onChange={(e) => { setProfession(e.target.value as Profession); setError(null); }}
-                className="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-xl pl-7 pr-3 py-2 text-sm text-zinc-800 dark:text-zinc-100 focus:outline-none focus:border-amber-400 dark:focus:border-amber-500 focus:bg-white dark:focus:bg-zinc-900 cursor-pointer transition-colors"
+                className="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-full pl-9 pr-4 py-2 text-sm text-zinc-800 dark:text-zinc-100 focus:outline-none focus:border-amber-400 dark:focus:border-amber-500 focus:bg-white dark:focus:bg-zinc-900 cursor-pointer transition-colors"
               >
                 {PROFESSIONS.map((p) => (
                   <option key={p} value={p}>{p}</option>
@@ -107,7 +107,7 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
                 placeholder="e.g. Graphic Designer, Doctor, Teacher..."
                 value={customProfession}
                 onChange={(e) => { setCustomProfession(e.target.value); setError(null); }}
-                className="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-xl px-3 py-2 text-sm text-zinc-900 dark:text-zinc-50 placeholder:text-zinc-400 dark:placeholder:text-zinc-500 focus:outline-none focus:border-amber-400 dark:focus:border-amber-500 focus:bg-white dark:focus:bg-zinc-900 transition-colors"
+                className="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-full px-4 py-2 text-sm text-zinc-900 dark:text-zinc-50 placeholder:text-zinc-400 dark:placeholder:text-zinc-500 focus:outline-none focus:border-amber-400 dark:focus:border-amber-500 focus:bg-white dark:focus:bg-zinc-900 transition-colors"
               />
             </div>
           )}
@@ -117,14 +117,14 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
               <button
                 type="button"
                 onClick={onClose}
-                className="px-4 py-2 rounded-xl bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 text-xs font-medium text-zinc-700 dark:text-zinc-300 transition-colors cursor-pointer"
+                className="px-4 py-2 rounded-full bg-white dark:bg-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-700 border border-zinc-200 dark:border-zinc-700 text-xs font-medium text-zinc-700 dark:text-zinc-300 transition-colors cursor-pointer"
               >
                 Cancel
               </button>
             )}
             <button
               type="submit"
-              className="px-5 py-2 rounded-xl bg-amber-400 hover:bg-amber-500 text-zinc-950 text-xs font-bold transition-all cursor-pointer shadow-xs"
+              className="px-5 py-2 rounded-full bg-zinc-900 hover:bg-zinc-800 text-zinc-50 text-xs font-semibold transition-all cursor-pointer dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-white"
             >
               Save Profile
             </button>

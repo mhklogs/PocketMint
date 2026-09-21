@@ -46,7 +46,7 @@ export const TransactionList: React.FC<TransactionListProps> = ({
         {transactions.length > 0 && (
           <button
             onClick={onClearAll}
-            className="self-start sm:self-auto text-xs text-red-500 dark:text-red-400 bg-red-50 dark:bg-red-950/20 hover:bg-red-100 dark:hover:bg-red-950/30 px-2.5 py-1 rounded-lg transition-colors flex items-center gap-1 cursor-pointer font-medium border border-transparent dark:border-red-900/30"
+            className="self-start sm:self-auto text-xs text-red-500 dark:text-red-400 bg-white dark:bg-zinc-800 hover:bg-red-50 dark:hover:bg-zinc-700 px-3 py-1 rounded-full transition-colors flex items-center gap-1 cursor-pointer font-medium border border-zinc-200 dark:border-zinc-700"
           >
             <Trash2 className="w-3.5 h-3.5" />
             Clear
@@ -64,7 +64,7 @@ export const TransactionList: React.FC<TransactionListProps> = ({
               placeholder="Search by name or category..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-xl pl-8 pr-3 py-1.5 text-xs text-zinc-800 dark:text-zinc-100 placeholder:text-zinc-400 dark:placeholder:text-zinc-500 focus:outline-none focus:border-amber-400 dark:focus:border-amber-500 focus:bg-white dark:focus:bg-zinc-900 transition-colors"
+              className="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-2xl pl-8 pr-3 py-1.5 text-xs text-zinc-800 dark:text-zinc-100 placeholder:text-zinc-400 dark:placeholder:text-zinc-500 focus:outline-none focus:border-amber-400 dark:focus:border-amber-500 focus:bg-white dark:focus:bg-zinc-900 transition-colors"
             />
           </div>
 
@@ -73,7 +73,7 @@ export const TransactionList: React.FC<TransactionListProps> = ({
             <select
               value={categoryFilter}
               onChange={(e) => setCategoryFilter(e.target.value)}
-              className="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-xl pl-7 pr-3 py-1.5 text-xs text-zinc-700 dark:text-zinc-300 focus:outline-none focus:border-amber-400 dark:focus:border-amber-500 focus:bg-white dark:focus:bg-zinc-900 cursor-pointer transition-colors"
+              className="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-2xl pl-7 pr-3 py-1.5 text-xs text-zinc-700 dark:text-zinc-300 focus:outline-none focus:border-amber-400 dark:focus:border-amber-500 focus:bg-white dark:focus:bg-zinc-900 cursor-pointer transition-colors"
             >
               <option value="ALL">All Categories</option>
               <option value="Travel/Pursuits">★ Travel / Pursuits</option>
@@ -89,7 +89,7 @@ export const TransactionList: React.FC<TransactionListProps> = ({
 
       {/* List */}
       {filtered.length === 0 ? (
-        <div className="text-center py-12 px-4 bg-zinc-50/50 dark:bg-zinc-800/10 rounded-xl border border-dashed border-zinc-200 dark:border-zinc-800">
+        <div className="text-center py-12 px-4 bg-zinc-50/50 dark:bg-zinc-800/10 rounded-2xl border border-dashed border-zinc-200 dark:border-zinc-800">
           <p className="text-xs text-zinc-500 dark:text-zinc-400">
             {transactions.length === 0
               ? "No expenses or income logged yet. Add your first item above!"
@@ -104,11 +104,11 @@ export const TransactionList: React.FC<TransactionListProps> = ({
             return (
               <div
                 key={t.id}
-                className="flex items-center justify-between p-3 rounded-xl border border-zinc-100 dark:border-zinc-800/80 hover:border-zinc-200 dark:hover:border-zinc-700 bg-zinc-50/40 dark:bg-zinc-800/5 hover:bg-white dark:hover:bg-zinc-900 transition-all duration-150"
+                className="flex items-center justify-between p-3 rounded-2xl border border-zinc-100 dark:border-zinc-800/80 hover:border-zinc-200 dark:hover:border-zinc-700 bg-zinc-50/40 dark:bg-zinc-800/5 hover:bg-white dark:hover:bg-zinc-900 transition-all duration-150"
               >
                 <div className="flex items-center gap-3 min-w-0 flex-1 pr-3">
                   <div
-                    className={`p-2 rounded-xl shrink-0 ${
+                    className={`p-2 rounded-2xl shrink-0 ${
                       isExpense
                         ? "bg-amber-100 dark:bg-amber-950/30 text-amber-800 dark:text-amber-400"
                         : "bg-emerald-100 dark:bg-emerald-950/30 text-emerald-800 dark:text-emerald-400"

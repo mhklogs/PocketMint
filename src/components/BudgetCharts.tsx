@@ -120,7 +120,7 @@ export const BudgetCharts: React.FC<BudgetChartsProps> = ({
         </div>
 
         {/* Chart View Toggle */}
-        <div className="flex bg-zinc-100 dark:bg-zinc-800 p-1 rounded-xl text-xs font-medium self-start sm:self-auto gap-0.5">
+        <div className="flex bg-zinc-100 dark:bg-zinc-800 p-1 rounded-2xl text-xs font-medium self-start sm:self-auto gap-0.5">
           <button
             onClick={() => setActiveChartTab("donut")}
             className={`px-3 py-1 rounded-lg transition-all flex items-center gap-1.5 cursor-pointer ${
@@ -204,7 +204,7 @@ export const BudgetCharts: React.FC<BudgetChartsProps> = ({
             <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
               {hoveredSegment ? (
                 <>
-                  <span className="text-[10px] uppercase font-bold text-zinc-400">
+                  <span className="text-[10px] font-semibold text-zinc-400">
                     {hoveredSegment}
                   </span>
                   <span className="text-sm font-bold font-mono text-zinc-800">
@@ -245,7 +245,7 @@ export const BudgetCharts: React.FC<BudgetChartsProps> = ({
               return (
                 <div
                   key={seg.id}
-                  className={`p-2.5 rounded-xl border transition-all ${
+                  className={`p-2.5 rounded-2xl border transition-all ${
                     isHovered
                       ? "bg-zinc-50 border-zinc-300 shadow-3xs"
                       : "bg-transparent border-transparent"
@@ -294,11 +294,11 @@ export const BudgetCharts: React.FC<BudgetChartsProps> = ({
             }
 
             return (
-              <div key={seg.id} className="space-y-1.5 p-3 rounded-xl border border-zinc-100 hover:border-zinc-200 transition-colors">
+              <div key={seg.id} className="space-y-1.5 p-3 rounded-2xl border border-zinc-100 hover:border-zinc-200 transition-colors">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
                   <div className="flex items-center gap-2">
                     <span className={`w-2.5 h-2.5 rounded-full ${seg.fillColor}`} />
-                    <span className="text-xs font-bold text-zinc-800 uppercase tracking-tight">
+                    <span className="text-xs font-semibold text-zinc-800">
                       {seg.id}
                     </span>
                     <span className="text-[10px] text-zinc-400">
@@ -363,7 +363,7 @@ export const BudgetCharts: React.FC<BudgetChartsProps> = ({
               {categorySummary.map((item) => {
                 const pct = totalVariableSpend > 0 ? (item.amount / totalVariableSpend) * 100 : 0;
                 return (
-                  <div key={item.category} className="space-y-1.5 p-3 rounded-xl bg-zinc-50/50 dark:bg-zinc-800/10 border border-zinc-100 dark:border-zinc-800 transition-colors duration-200">
+                  <div key={item.category} className="space-y-1.5 p-3 rounded-2xl bg-zinc-50/50 dark:bg-zinc-800/10 border border-zinc-100 dark:border-zinc-800 transition-colors duration-200">
                     <div className="flex items-center justify-between text-xs font-medium">
                       <span className="text-zinc-800 dark:text-zinc-200">{item.category}</span>
                       <div className="flex items-center gap-2 font-mono">
